@@ -1,0 +1,54 @@
+{
+  "version": "2025.0",
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 1.1508196721311474,
+        "y": 1.3457479508196706
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 1.7502049180327868,
+        "y": 1.705379098360654
+      },
+      "isLocked": false,
+      "linkedName": "mavisolcoralal"
+    },
+    {
+      "anchor": {
+        "x": 3.1887295081967215,
+        "y": 1.885194672131147
+      },
+      "prevControl": {
+        "x": 2.36157786885246,
+        "y": 1.5255635245901633
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": null
+    }
+  ],
+  "rotationTargets": [],
+  "constraintZones": [],
+  "pointTowardsZones": [],
+  "eventMarkers": [],
+  "globalConstraints": {
+    "maxVelocity": 3.0,
+    "maxAcceleration": 3.0,
+    "maxAngularVelocity": 540.0,
+    "maxAngularAcceleration": 720.0,
+    "nominalVoltage": 12.0,
+    "unlimited": false
+  },
+  "goalEndState": {
+    "velocity": 0,
+    "rotation": 62.81888891452288
+  },
+  "reversed": false,
+  "folder": null,
+  "idealStartingState": {
+    "velocity": 0,
+    "rotation": -125.25635871296282
+  },
+  "useDefaultConstraints": true
+}

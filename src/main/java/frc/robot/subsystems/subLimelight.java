@@ -12,20 +12,20 @@ public class subLimelight extends SubsystemBase {
   @Override
   public void periodic() {
     SmartDashboard.putBoolean("Limelight Has Target", hasTarget());
-    SmartDashboard.putNumber("Limelight Horizontal Error", getHorizontalError()-Constants.LimeLightOffsets.HorizontalOffset);
-    SmartDashboard.putNumber("Limelight Distance Error", getDistanceError()-Constants.LimeLightOffsets.DistanceOffset);
+    SmartDashboard.putNumber("Limelight Horizontal Error", getHorizontalError());
+    SmartDashboard.putNumber("Limelight Distance Error", getDistanceError());
   }
 
   public double getHorizontalError(){
     // Horizontal offset from crosshair to target in degrees
-    return LimelightHelpers.getTX("limelight-right");
+    return (-LimelightHelpers.getTX("limelight") + -Constants.LimeLightOffsets.HorizontalOffset);
   }
   public double getDistanceError(){
     // Target area (0% to 100% of image)
-    return LimelightHelpers.getTA("limelight-right");
+    return (-LimelightHelpers.getTA("limelight")+- Constants.LimeLightOffsets.DistanceOffset);
   }
   public boolean hasTarget(){
     // Do you have a valid target?
-    return LimelightHelpers.getTV("limelight-right");
+    return LimelightHelpers.getTV("limelight");
   }
 }

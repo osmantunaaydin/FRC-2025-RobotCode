@@ -10,18 +10,18 @@ import frc.robot.subsystems.subLimelight;
 import frc.robot.subsystems.subSwerve;
 import swervelib.SwerveInputStream;
 
-public class cmdAuto_AlignRobot extends Command {
+public class cmdAuto_Align2Robot extends Command {
   subSwerve swerve;
   subLimelight limelight;
-  PIDController pidHorizontalController = new PIDController(0, 0, 0.0);
-  PIDController pidDistanceController = new PIDController(0, 0, 0.0);
+  PIDController pidHorizontalController = new PIDController(0.06, 0, 0);
+  PIDController pidDistanceController = new PIDController(0.06, 0, 0);
   double horizontalError = 0;
   double distanceError = 0;
   SwerveInputStream driveAngularVelocity;
   double forwardCommand = 0;
   double strafeCommand = 0;
 
-  public cmdAuto_AlignRobot(subSwerve swerve, subLimelight lime) {
+  public cmdAuto_Align2Robot(subSwerve swerve, subLimelight lime) {
     this.swerve = swerve;
     this.limelight = lime;
     pidHorizontalController.setSetpoint(0);
@@ -37,13 +37,13 @@ public class cmdAuto_AlignRobot extends Command {
   @Override
   public void execute() {
     if(!limelight.hasTarget()){
-      swerve.drive(new ChassisSpeeds(0, 0, 0));    
+      swerve.drive(new ChassisSpeeds(1, 1, 1));    
       return;
     }
     horizontalError = limelight.getHorizontalError();
     distanceError = limelight.getDistanceError();
-    forwardCommand = MathUtil.clamp(pidDistanceController.calculate(distanceError), 0, 0);
-    strafeCommand = MathUtil.clamp(pidHorizontalController.calculate(horizontalError), 0, 0);
+    forwardCommand = MathUtil.clamp(pidDistanceController.calculate(distanceError), -1, 2);
+    strafeCommand = MathUtil.clamp(pidHorizontalController.calculate(horizontalError), -1, 2);
     //System.out.println("Horizontal Error: " + strafeCommand + " Distance Error: " + horizontalError);
     swerve.drive(new ChassisSpeeds(-forwardCommand, -strafeCommand, 0));    
   }

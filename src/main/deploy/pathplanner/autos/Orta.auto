@@ -1,0 +1,43 @@
+{
+  "version": "2025.0",
+  "command": {
+    "type": "sequential",
+    "data": {
+      "commands": [
+        {
+          "type": "path",
+          "data": {
+            "pathName": "Orta"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "Limelight"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "AsansorL4"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "CoralBirak"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "AsansorAlKonum"
+          }
+        }
+      ]
+    }
+  },
+  "resetOdom": true,
+  "folder": null,
+  "choreoAuto": false
+}

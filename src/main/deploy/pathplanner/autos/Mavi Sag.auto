@@ -1,0 +1,91 @@
+{
+  "version": "2025.0",
+  "command": {
+    "type": "sequential",
+    "data": {
+      "commands": [
+        {
+          "type": "path",
+          "data": {
+            "pathName": "MaviSagCoralAt1"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "Limelight"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "AsansorL4"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "CoralBirak"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "AsansorAlKonum"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "MaviSagCoralAl"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "AsansorAlKonum"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "CoralAl"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "MaviSagCoralAt2"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "Limelight"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "AsansorL4"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "CoralBirak"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "AsansorAlKonum"
+          }
+        }
+      ]
+    }
+  },
+  "resetOdom": true,
+  "folder": null,
+  "choreoAuto": false
+}
